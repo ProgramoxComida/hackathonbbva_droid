@@ -5,7 +5,7 @@ class Sale {
         get() = field
         set(value) { field = value }
 
-    var amount: Double = 0.00
+    var amount: Long = 0
         get() = field
         set(value) { field = value }
 }

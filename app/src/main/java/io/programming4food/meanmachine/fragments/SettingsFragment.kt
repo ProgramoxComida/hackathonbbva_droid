@@ -6,11 +6,14 @@ import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
+import android.view.Menu
 import android.view.View
 import android.view.ViewGroup
+import io.programming4food.meanmachine.QRActivity
 
 import io.programming4food.meanmachine.R
 import io.programming4food.meanmachine.adapters.SettingsOptionsAdapter
+import io.programming4food.meanmachine.models.MenuOption
 
 /**
  * A simple [Fragment] subclass.
@@ -26,7 +29,13 @@ class SettingsFragment : Fragment() {
         // Inflate the layout for this fragment
         var view = inflater.inflate(R.layout.fragment_settings, container, false)
 
-        var options:Array<String> = arrayOf("Mi código QR", "Test 2", "Test 3")
+        var options:ArrayList<MenuOption> = ArrayList()
+
+        var option:MenuOption = MenuOption()
+        option.title = "Mi código QR"
+        option.activity = QRActivity()
+        options.add(option)
+
 
         viewManager = LinearLayoutManager(view.context)
         viewAdapter = SettingsOptionsAdapter(options)

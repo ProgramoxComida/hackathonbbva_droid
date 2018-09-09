@@ -2,6 +2,7 @@ package io.programming4food.meanmachine.fragments
 
 
 import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.Fragment
 
@@ -10,6 +11,8 @@ import android.support.design.widget.TabLayout
 import io.programming4food.meanmachine.adapters.BillPagerAdapter
 import android.support.v4.view.ViewPager
 import android.view.*
+import android.widget.Button
+import io.programming4food.meanmachine.QRActivity
 import io.programming4food.meanmachine.R.string.action_settings
 
 /**

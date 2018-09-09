@@ -7,6 +7,9 @@
     <string name="products_title">Productos</string>
     <string name="options_title">Opciones</string>
     <string name="logout">Cerrar Sesión</string>
+    <string name="title_qr">Código Bancomer Móvil</string>
+    <string name="finish_bill">Terminar</string>
+    <string name="indications_qr">Por favor presenta el código QR que se encuentra abajo para realizar el cobro al usuario con Bancomer Móvil</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>

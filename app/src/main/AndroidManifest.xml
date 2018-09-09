@@ -19,7 +19,8 @@
         <activity
             android:name=".CoreActivity"
             android:label="@string/title_activity_core"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
+        <activity android:name=".QRActivity"></activity>
     </application>
 
 </manifest>

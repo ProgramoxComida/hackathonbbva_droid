@@ -1,6 +1,7 @@
 package io.programming4food.meanmachine.fragments
 
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
@@ -14,6 +15,9 @@ import android.widget.EditText
 import java.nio.file.Files.delete
 import android.text.Editable
 import android.support.annotation.IdRes
+import io.programming4food.meanmachine.QRActivity
+import org.jetbrains.anko.support.v4.toast
+import java.lang.Integer.parseInt
 
 /**
  * A simple [Fragment] subclass.
@@ -46,6 +50,7 @@ class FixedAmountTabFragment : Fragment(), View.OnClickListener {
         view.findViewById<TextView>(R.id.t9_key_9).setOnClickListener(this)
         view.findViewById<TextView>(R.id.t9_key_clear).setOnClickListener(this)
         view.findViewById<TextView>(R.id.t9_key_backspace).setOnClickListener(this)
+        view.findViewById<TextView>(R.id.bill_button).setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -64,6 +69,21 @@ class FixedAmountTabFragment : Fragment(), View.OnClickListener {
                 val charCount = editable.length
                 if (charCount > 0) {
                     editable.delete(charCount - 1, charCount)
+                }
+            }
+            R.id.bill_button -> {
+                val editable = mPasswordField!!.text
+                val charCount = editable.length
+
+                if(mPasswordField!!.text.toString() == "") {
+                    toast("Debes ingresar un importe de mínimo $1 MXN")
+                }
+
+                if(mPasswordField!!.text.toString() != "" && Integer.parseInt(mPasswordField!!.text.toString()) > 0) {
+                    val i = Intent(context, QRActivity::class.java)
+                    startActivity(i)
+                } else {
+                    toast("Por favor ingresa un valor")
                 }
             }
         }

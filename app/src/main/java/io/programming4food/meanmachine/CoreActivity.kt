@@ -30,6 +30,10 @@ class CoreActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         supportActionBar!!.setTitle(R.string.dashboard_title)
 
+        var ft: android.support.v4.app.FragmentTransaction? = supportFragmentManager.beginTransaction()
+        ft!!.replace(R.id.content_frame, DashboardFragment())
+        ft!!.commit()
+
         nav_view.setNavigationItemSelectedListener(this)
     }
 

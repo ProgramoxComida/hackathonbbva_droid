@@ -28,7 +28,7 @@ class DashboardFragment : Fragment() {
         val items = this.setDummyData()
         val entries = ArrayList<DropBoxManager.Entry>()
 
-        for(i in 0 .. items.size ){
+        for(i in 0 until items.size){
             entries.add(DropBoxManager.Entry(items[i].date, items[i].amount as Long))
         }
         // Inflate the layout for this fragment
@@ -39,10 +39,14 @@ class DashboardFragment : Fragment() {
         var items:ArrayList<Sale> = ArrayList()
 
         var item1:Sale = Sale()
-        item1.amount = 100.00
+        item1.amount = 100
         item1.date = "2018-09-07"
 
-        items.add(item1)
+        var item2:Sale = Sale()
+        item2.amount = 100
+        item2.date = "2018-09-08"
+
+        items.add(item2)
 
         return items
     }
