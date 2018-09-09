@@ -81,6 +81,7 @@ class FixedAmountTabFragment : Fragment(), View.OnClickListener {
 
                 if(mPasswordField!!.text.toString() != "" && Integer.parseInt(mPasswordField!!.text.toString()) > 0) {
                     val i = Intent(context, QRActivity::class.java)
+                    i.putExtra("amount", mPasswordField!!.text.toString())
                     startActivity(i)
                 } else {
                     toast("Por favor ingresa un valor")

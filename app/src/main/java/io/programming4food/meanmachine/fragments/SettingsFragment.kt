@@ -9,9 +9,9 @@ import android.view.LayoutInflater
 import android.view.Menu
 import android.view.View
 import android.view.ViewGroup
-import io.programming4food.meanmachine.QRActivity
 
 import io.programming4food.meanmachine.R
+import io.programming4food.meanmachine.UserQRActivity
 import io.programming4food.meanmachine.adapters.SettingsOptionsAdapter
 import io.programming4food.meanmachine.models.MenuOption
 
@@ -33,7 +33,7 @@ class SettingsFragment : Fragment() {
 
         var option:MenuOption = MenuOption()
         option.title = "Mi código QR"
-        option.activity = QRActivity()
+        option.activity = UserQRActivity()
         options.add(option)
 
 
