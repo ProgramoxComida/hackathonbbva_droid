@@ -23,8 +23,9 @@ class ProductsAdapter(private val productsDataset:ArrayList<Product>): RecyclerV
         return productsDataset.size
     }
 
-    override fun onBindViewHolder(p0: ProductsAdapter.ViewHolder, position: Int) {
-
+    override fun onBindViewHolder(holder: ProductsAdapter.ViewHolder, position: Int) {
+        holder.productCheckbox.text = productsDataset[position].name
+        holder.priceText.text = productsDataset[position].price.toString()
     }
 
     inner class ViewHolder (itemView: View) : RecyclerView.ViewHolder(itemView) {
