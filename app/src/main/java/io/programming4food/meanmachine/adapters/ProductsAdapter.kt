@@ -31,11 +31,15 @@ class ProductsAdapter(private val productsDataset:ArrayList<Product>): RecyclerV
     inner class ViewHolder (itemView: View) : RecyclerView.ViewHolder(itemView) {
         var productCheckbox:CheckBox = itemView.findViewById(R.id.product_checkbox)
         var priceText:TextView = itemView.findViewById(R.id.product_price)
+        var total:Double = 0.00
 
         init {
             productCheckbox.setOnCheckedChangeListener(object: CompoundButton.OnCheckedChangeListener{
                 override fun onCheckedChanged(p0: CompoundButton?, p1: Boolean) {
-                    Log.d("stat", "Changed")
+                    if(p0!!.isChecked){
+                        total += priceText.text.toString().toDouble()
+                        Log.d("Total", total.toString())
+                    }
                 }
 
             })

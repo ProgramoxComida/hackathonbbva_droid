@@ -20,7 +20,7 @@ class QRActivity : AppCompatActivity() {
 
         var amount:String = intent.getStringExtra("amount")
 
-        var uri = "http://hackathonbbvabackend-pro.jjej6axnqt.us-east-1.elasticbeanstalk.com/api/code/generate?alias=CREDIT_CARD&account=4772133032264209&account_type=CREDIT_CARD&reference=1234567&account_holder_name=Fidel%20Aquino&amount=" + amount
+        var uri = "http://hackathonbbvabackend-pro.jjej6axnqt.us-east-1.elasticbeanstalk.com/api/code/generate?alias=CREDITCARD&account=4772133032264209&account_type=CREDIT_CARD&reference=1234567&account_holder_name=Fidel%20Aquino&amount=" + amount
         var imageView = findViewById<ImageView>(R.id.qr_image)
 
         Glide.with(this).load(uri).into(imageView)
