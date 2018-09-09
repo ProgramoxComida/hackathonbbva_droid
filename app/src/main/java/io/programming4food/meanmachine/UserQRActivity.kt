@@ -16,7 +16,7 @@ class UserQRActivity : AppCompatActivity() {
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         supportActionBar!!.title = getString(R.string.user_title_qr)
 
-        var uri = "http://hackathonbbvabackend-pro.jjej6axnqt.us-east-1.elasticbeanstalk.com/api/code/generate?alias=TEST&account=4772133032264209&account_type=CREDIT_CARD&reference=1234567&account_holder_name=Fidel%20Aquino"
+        var uri = "http://hackathonbbvabackend-pro.jjej6axnqt.us-east-1.elasticbeanstalk.com/api/code/generate?alias=CREDITCARD&account=4772133032264209&account_type=CREDIT_CARD&reference=1234567&account_holder_name=Fidel%20Aquino&amount=0"
         var imageView = findViewById<ImageView>(R.id.qr_user_image)
 
         Glide.with(this).load(uri).into(imageView)
